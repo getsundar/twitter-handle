@@ -49,8 +49,16 @@ export class TwitterFeedComponent implements OnInit {
     });
   }
   renderFeed(feedToAdd) {
+    feedToAdd.sort((a, b) => {
+      return a.id - b.id;
+    });
     feedToAdd.forEach(feed => {
-      this.feedToRender.unshift(feed);
+      const feedIndex = this.feedToRender.findIndex((element) => {
+        return element.id === feed.id;
+      });
+      if (feedIndex === -1) {
+        this.feedToRender.unshift(feed);
+      }
     });
   }
 }

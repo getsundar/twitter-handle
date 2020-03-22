@@ -3,9 +3,6 @@ import {
   OnInit,
   Input
 } from '@angular/core';
-import {
-  TwitterFeed
-} from 'src/app/models/twitter-feed.model';
 
 @Component({
   selector: 'app-user-feed',
@@ -15,7 +12,5 @@ import {
 export class UserFeedComponent implements OnInit {
   @Input() feedToRender;
   constructor() {}
-
   ngOnInit() {}
-
 }
