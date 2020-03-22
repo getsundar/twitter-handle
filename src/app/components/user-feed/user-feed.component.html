@@ -1,0 +1,9 @@
+<mat-card class="feedHolder" *ngFor="let feed of feedToRender">
+  <mat-card-header>
+    <img mat-card-avatar src="{{feed.image}}">
+    <mat-card-subtitle class="feedUserName">{{feed.username}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="feedContent">
+    <p>{{feed.text}}</p>
+  </mat-card-content>
+</mat-card>

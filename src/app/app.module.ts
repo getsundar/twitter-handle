@@ -13,17 +13,32 @@ import {
 import {
   HttpClientModule
 } from '@angular/common/http';
+import {
+  TwitterFeedComponent
+} from './components/twitter-feed/twitter-feed.component';
+import {
+  Utils
+} from './shared/utils';
+import {
+  MatCardModule
+} from '@angular/material/card';
+import {
+  UserFeedComponent
+} from './components/user-feed/user-feed.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TwitterFeedComponent,
+    UserFeedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [Utils],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

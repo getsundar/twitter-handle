@@ -1,9 +1,6 @@
 import {
   Component
 } from '@angular/core';
-import {
-  HttpClient
-} from '@angular/common/http';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,9 +8,5 @@ import {
 })
 export class AppComponent {
   title = 'twitter-handle';
-  constructor(private http: HttpClient) {
-    this.http.get('http://localhost:9000/getFeed').subscribe((data) => {
-      debugger;
-    });
-  }
+  constructor() {}
 }
