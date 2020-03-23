@@ -44,8 +44,9 @@ export class TwitterFeedComponent implements OnInit {
         catchError(error => of ('Error'))
       );
     refreshInterval$.subscribe((data) => {
-      const parsedData = this.utils.testJSON(data);
-      ((parsedData ? this.renderFeed(JSON.parse(data)) : null));
+      this.renderFeed(data);
+      // const parsedData = this.utils.testJSON(data);
+      // ((typeof (data) !== 'string') ? this.renderFeed(data) : null);
     });
   }
   renderFeed(feedToAdd) {
